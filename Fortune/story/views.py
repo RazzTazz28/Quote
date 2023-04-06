@@ -22,6 +22,8 @@ def quotes(request):
 
 def story(request):
     comments = get_comments()
-    context = {'comments': comments}
+    context = {}
+    if(comments):
+        context = {'comments': comments}
 
     return render(request, "story/story.html", context)
