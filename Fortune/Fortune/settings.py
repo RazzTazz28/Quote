@@ -18,11 +18,12 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/4.2/howto/deployment/checklist/
 
+SECRET_KEY = 'django-insecure-=)l3)sxd)l4z$nx5_3lfqva=ofl2f1r2ht67r94*&9v3^p4f)-'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
-ALLOWED_HOSTS = ['127.0.0.1','discombobulated.uk']
+ALLOWED_HOSTS = ['127.0.0.1', 'discmbobulated.herokuapp.com']
 
 
 # Application definition
