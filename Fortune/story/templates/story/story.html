@@ -1,0 +1,117 @@
+{% extends 'story/base.html' %}
+
+{% block title %}Fortune{% endblock %}
+{% load static %}
+<!-- importing css file -->
+{% block style %}<link rel="stylesheet" type="text/css" href="{% static 'css/story.css' %}">{% endblock %}
+
+{% block content %}
+
+
+    <div class="top">
+        <h3>Gmail: oneforallhive@gmail.com</h3>
+        <div class="donate">
+            <a class="donation_btn" href="https://buy.stripe.com/test_4gw9Ca1XH1fX3PqbII">Donate With Stripe</a>
+            <a class="donation_btn" href="https://www.paypal.com/pools/c/8T1rJt0hq7">Donate With PayPal</a>
+        </div>
+    </div>
+
+    <!-- main body of login page -->
+    <div class="main">
+
+        <div class="quote_div">
+            <button class="get_quote" id="get_quote" type="button">Quote</button>
+            <h1 class="quote" id="quote"></h1>
+        </div>
+
+
+        <div class="story">
+            <h4> Who em I?</h4>
+            <p>
+                Hi, I'm just an individual.
+                In my spare time, I'm building a platform that hopefully will benefit future generations.
+                What I'm doing is planting the seed. Hopefully, future generations will water and nurture the tree.
+                If you want to find out more, I will leave an email where we can debate the plan I come up with.
+            </p>
+            <h4>My service.</h4>
+            <p>
+                This page took me 1 day to build with some code I have from other projects.
+                Keep that in mind as a reference if you are interested to buy a website from me.
+                But It also depends on what you need it for.
+                If you are interested, just email me.
+                If you have any job available in London. In, or around Sutton please feel free to contact me.
+                I'm experienced in Car Wash for 4 years, fish factory production for 2 years, wood preparation for painters for 2 years,
+                labour on a building site for 1 year, food production for 2 years, and landscaping for 1 summer.
+                I can spend days and nights coding and learning about code without a problem. Just give me a coffee!
+            </p>
+            <h4> What is this page?</h4>
+            <p>
+                This page is my uncontrolled stress, thank you! I wanted to prove that I'm not just any loser,
+                I'm a loser with a certificate. Mr. Loser at your service!
+                I'm not proud of the circumstances but the company that I used to work for, closed a department and I remain without a source of income.
+                Therefore, I have 10 days to find a job to be able to pay my rent and expenses which come to around 1000 pounds.
+                I build this page as a backup to that, hoping that some kind, smart, beautiful individuals would understand my situation and
+                help me out.
+
+            </p>
+
+            <h4>Extra.</h4>
+            <p>
+                If you like to help me in any way would be appreciated. Anything will do.
+                I'm willing to collaborate, and partner as long as we share the same values.
+                Values like cooperating and supporting each other for mutual growth, but this is the topic I'm going to
+                release with the platform. If you want to hear more about the platform, I will make public
+                more information on Gmail and YouTube pretty soon.
+                The reason I don't implement a login system, it's because it goes over the purpose of this page.
+            </p>
+            <p>Thank you for your time!</p>
+
+        </div>
+
+
+        <div class="quotes_div" id="quotes_div">
+            <button class="get_quotes" id="get_quotes" type="button">All Quotes</button>
+        </div>
+
+        <div class="comments">
+            <div class="post_comment">
+                {% csrf_token %}
+                <input type="text" class="nickname" id="nickname" placeholder="Nickname">
+                <br>
+                <textarea class="comment" id="comment" placeholder="Message"></textarea>
+                <br>
+                <button class="comment_btn" id="comment_btn" type="button">Submit</button>
+            </div>
+            <div class="comment_list">
+                {% for comment in comments %}
+                        <hr>
+                        <span class="username">{{ comment.user }}</span><span> : </span><span class="date">{{ comment.created_at }}</span>
+
+                        <div class="comm_body_div">
+                            <p class="comm_body">{{ comment.comment }}</p>
+                        </div>
+
+
+                        <button class="del_button" id="delete_{{ comment.id }}" type="button" onClick="delete_button(this.id)">Delete</button>
+
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+
+
+    <!-- bottom side of login page -->
+    <div class="bottom">
+        <h3>This page was created on 05 April 2023 and will expire on 30 April 2023.</h3>
+        <h3>After 30/04/2023 this page will be removed or updated with different content depending on user opinion. </h3>
+    </div>
+
+
+
+{% endblock %}
+
+{% block js_block %}
+    <script type="text/javascript" src="{% static 'javascript/jquery.js' %}"></script>
+    <script type="text/javascript" src="{% static 'javascript/story.js' %}"></script>
+    <script type="text/javascript" src="{% static 'javascript/comments.js' %}"></script>
+{% endblock %}

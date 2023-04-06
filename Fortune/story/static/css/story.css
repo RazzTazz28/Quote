@@ -1,0 +1,270 @@
+/* html and body width & height */
+html, body {
+    height: 100%;
+    width: 100%;
+    padding: 0px;
+    margin: 0px;
+}
+
+/* full page div width & height */
+.content {
+    height: 100%;
+    width: 100%;
+    padding: 0px;
+    margin: 0px;
+}
+
+/* navigation bar css */
+.top {
+    box-sizing: border-box;
+    height: 10%;
+    width: 100%;
+    height: auto;
+    background-color: #04AA6D;
+    padding: 2px;
+    float: left;
+    border: 1px solid #000000;
+}
+
+.donation_btn {
+    position: relative;
+    float: right;
+    background-color: #000000;
+    text-decoration: none;
+    line-height: 50px;
+    text-align: center;
+    color: #ffffff;
+    width: 160px;
+    height: 50px;
+    font-family: Arial, sans-serif;
+    margin-top: 30px;
+    margin-left: 20px;
+    border: 1px solid #FFD700;
+    border-radius: 12px;
+}
+.donation_btn:hover {
+    cursor: pointer;
+    color: #66ff66;
+}
+
+
+.main {
+    box-sizing: border-box;
+    position: relative;
+    min-height: 80%;
+    height: auto;
+    overflow: auto;
+    width: 100%;
+    background: rgba(59, 63, 82, 1);
+    background-color: #e6ffe6;
+    padding: 20px;
+    float: left;
+    display: flex;
+    flex-direction: column;
+}
+
+/* TOP QUOTES */
+/* button, checkbox, checkbox label, recover credentials div css */
+.quote_div {
+    min-width: 80%;
+    min-height: 10%;
+    height: auto;
+    margin-left: 10%;
+    margin-right: 10%;
+    align-items: center;
+
+}
+
+
+.quote {
+    text-align: center;
+    min-width: 80%;
+    min-height: 10%;
+    margin-left: 10%;
+    margin-right: 10%;
+    color: rgba(35, 45, 55, 1);
+}
+
+.get_quote{
+    background-color: #000000;
+    color: #ffffff;
+    width: 140px;
+    height: 45px;
+    padding: 12px 20px;
+    border: 1px solid #FFD700;
+    border-radius: 12px;
+    box-sizing: border-box;
+    margin-left: 43%;
+}
+
+.get_quote:hover {
+    cursor: pointer;
+    color: #66ff66;
+}
+
+/*######################## COMMENTS ##########################*/
+
+.comments {
+    float: left;
+    width: 100%;
+    height: auto;
+    align-items: center;
+}
+
+.post_comment {
+    right: 50%;
+    width: auto;
+    height: auto;
+}
+
+.comment_list {
+    min-width: 100%;
+    width: auto;
+    height: auto;
+}
+
+/* username input field css */
+.nickname {
+  width: 240px;
+  height: 45px;
+  padding: 12px 20px;
+  display: block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  background-color: rgba(255, 255, 150, 1);
+}
+
+.comment {
+    width: 240px;
+    height: 150px;
+    padding: 12px 20px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    background-color: rgba(255, 255, 150, 1);
+}
+
+.comment_btn{
+    background-color: #000000;
+    color: #ffffff;
+    width: 140px;
+    height: 45px;
+    margin-top: 5px;
+    padding: 12px 20px;
+    border: 1px solid #FFD700;
+    border-radius: 12px;
+    box-sizing: border-box;
+    margin-left: 2.5%;
+}
+
+.comment_btn:hover {
+    cursor: pointer;
+    color: #66ff66;
+}
+
+.username{
+    color: rgba(15, 60, 120, 1);
+}
+
+
+.comm_body_div {
+    width: 100%;
+    height: auto;
+}
+
+.comm_body {
+    word-wrap: break-word;
+}
+
+.del_button{
+    background-color: #000000;
+    color: #ffffff;
+    width: 100px;
+    height: 40px;
+    padding: 12px 20px;
+    border: 1px solid #FFD700;
+    border-radius: 12px;
+    box-sizing: border-box;
+
+}
+
+.del_button:hover {
+    cursor: pointer;
+    color: #66ff66;
+}
+
+/*######################## ALL QUOTES ##########################*/
+
+.quotes_div {
+    min-width: 100%;
+    min-height: 10%;
+    height: auto;
+    float: right;
+    margin-top: 20px;
+    margin-bottom: 50px;
+    align-items: center;
+}
+
+
+.get_quotes{
+    background-color: #000000;
+    color: #ffffff;
+    width: 140px;
+    height: 45px;
+    padding: 12px 20px;
+    border: 1px solid #FFD700;
+    border-radius: 12px;
+    box-sizing: border-box;
+    margin-top: 2%;
+    margin-left: 43%;
+}
+
+.get_quotes:hover {
+    cursor: pointer;
+    color: #66ff66;
+}
+
+
+.quotes {
+    display: inline-block;
+    color: rgba(25, 80, 125, 1)
+    /* background-color: #ffffff; */
+}
+
+
+/* bottom section css */
+.bottom {
+    box-sizing: border-box;
+    background: #04AA6D;;
+    min-height: 10%;
+    height: auto;
+    padding: 20px;
+    float: left;
+    width: 100%;
+}
+
+
+@media screen and (max-width: 800px) {
+  .left_spacer {
+    box-sizing: border-box;
+    width: 35%; /* The width is 100%, when the viewport is 800px or smaller */
+
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .left_spacer {
+    box-sizing: border-box;
+    width: 30%; /* The width is 100%, when the viewport is 800px or smaller */
+
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .left_spacer {
+    box-sizing: border-box;
+    width: 25%; /* The width is 100%, when the viewport is 800px or smaller */
+
+  }
+}
